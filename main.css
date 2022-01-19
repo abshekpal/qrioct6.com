@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    /* font-family: 'Bebas Neue', cursive; */
+}
+
+ul{
+    list-style: none;
+}
+
+.bg{
+    background: url('./images/nasa.jpg');
+    background-size: cover;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    z-index: -1;
+}
+
+.wrapper{
+    padding:0 80px;
+    width:100%;
+    height:auto;
+}
+
+header{
+    height: 80px;
+}
+
+header .container{
+    background: #0012;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:100%;
+}
+
+.logo{
+    font-weight: bold;
+    color:#fff;
+    font-size: 20px;
+}
+
+header .links ul{
+    display: flex;
+}
+
+header .links a{
+    color:#fff;
+    margin-left: 3.5rem;
+    display: inline-block;
+    font-weight: bold;
+    transition:all 0.3s ease;
+}
+
+header .links a:hover{
+    color:black;
+}
+
+.overlay{
+    display: none;
+}
+
+.hamburger-menu{
+    position: relative;
+    z-index: 99;
+    width:2rem;
+    height:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-menu .bar{
+    position: relative;
+    width:100%;
+    height:3px;
+    background: #ffffff;
+    border-radius: 3px;
+}
+
+.bar::before, .bar::after{
+    content: "";
+    position: absolute;
+    width:100%;
+    height:100%;
+    background:#ffffff;
+    transition: 0.5s;
+}
+
+.bar::before{
+    transform: translateY(-8px);
+}
+
+.bar::after{
+    transform: translateY(8px);
+}
+
+.wrapper.active .hamburger-menu .bar{
+    background: transparent;
+}
+
+.wrapper.active .bar::before{
+    transform: translateY(0) rotate(-45deg);
+}
+
+.wrapper.active .bar::after{
+    transform: translateY(0) rotate(45deg);
+}
+
+/* **** HERO **** */
+
+section.hero{
+    color:#fff;
+    width:100%;
+    z-index: 0;
+    position: relative;
+    top:54px;
+
+}
+section.hero .container{
+    width:100%;
+}
+
+section.hero h4{
+    letter-spacing: 13px;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: unset;
+    font-size:20px;
+}
+
+section.hero h1{
+    font-size:60px;
+    line-height: 90px;
+}
+
+section.hero .down-arrow{
+    stroke: #fff;
+    position:absolute;
+    bottom: -15em;
+    width:1.5em;
+    animation: moveArrow 1s alternate-reverse infinite;
+}
+
+
+
+@media screen and (max-width: 870px){
+    .hamburger-menu{
+        display: flex;
+    }
+    header .links{
+        position: fixed;
+        top:0;
+        right:0;
+        max-width: 60%;
+        width:100%;
+        height:100vh;
+        background:rgb(240, 86, 86);
+        /* filter: blur(9); */
+        z-index: 99;
+        transform: translateX(100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+    }
+    header .links ul{
+        flex-direction: column;
+    }
+    header .links a{
+        margin-left: 0;
+        padding:30px 0;
+        text-align: center;
+        width:100%;
+    }
+    .wrapper.active .overlay{
+        display: block;
+        position:fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        background:rgba(0, 0, 0, 0.7);
+        opacity: 1;
+        pointer-events: none;
+        transition: 0.9s;
+        z-index: 98;
+    }
+    .wrapper.active .links{
+        transform: translateX(0);
+        box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.4);
+    }
+}
+
+@media screen and (max-width: 470px){
+    .wrapper{
+        padding:0 20px;
+    }
+
+    section.hero{
+        width:100%;
+        max-height:100vh;
+    }
+
+    section.hero .container{
+        height:100%;
+    }
+
+    section.hero h4{
+        letter-spacing: 8px;
+        font-size:15px;
+    }
+    
+    section.hero h1{
+        font-size:40px;
+        line-height: 60px;
+    }
+    
+    section.hero .down-arrow{
+        position:absolute;
+        width:1.5em;
+        bottom:-230px;
+    }
+}
