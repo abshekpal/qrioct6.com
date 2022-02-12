@@ -340,7 +340,7 @@ section.about .left h1,
         right: 0;
         bottom: 0;
         left: 0;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.075);
         opacity: 1;
         pointer-events: none;
         transition: 0.9s;
@@ -433,7 +433,7 @@ section.about .left h1,
         width: 100%;
     }
 
-    section.about h1 {
+    section.about h1, .works .left h1 {
         font-size: 30px;
         width: 100%;
     }
