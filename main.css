@@ -204,15 +204,15 @@ section.about .right {
 }
 
 section.about .right div {
-    /* border:1px solid #fff; */
-    border-radius: 15px;
-    /* padding:30px 20px; */
     cursor: pointer;
 }
 
-section.about .left h1,
-.about .right div h3 {
+section.about .left h1{
     margin-bottom: 10px;
+}
+
+section.about .right div h3{
+    padding:10px 0;
 }
 
 .about .left p {
@@ -231,7 +231,7 @@ section.about .left h1,
     padding: 60px 0;
 }
 .works .left h1{
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     font-size: 40px;
     color: #fbca41;
 }
@@ -290,6 +290,69 @@ section.about .left h1,
 .works .right .gallerylink:hover .galleryimage {
     transform: scale(1.2);
 }
+
+/* ***** SERVICES ***** */
+.services{
+    width:100%;
+    height:auto;
+    padding: 60px 0;
+    color:#fff;
+}
+
+.services p{
+    color:#c7c7c7;
+}
+
+.services .left h1{
+    font-size: 40px;
+    color: #fbca41;
+    margin-bottom: 60px;
+}
+.services .right{
+    display: grid;
+    width:100%;
+    align-items: center;
+    justify-content: space-around;
+    grid-template-columns: repeat(4, 1fr);
+    gap:20px;
+}
+.services .right div{
+    cursor: pointer;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    background:rgb(12, 12, 12);
+}
+.services .right span{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 25px;
+    margin-bottom: 100px;
+    /* padding-bottom: 10px; */
+    border-right: 2px solid #fbca41;
+}
+.services .right h3{
+    margin:10px 0;
+}
+
+.services .left h1 span{
+    color:#000;
+    background:#fbca41;
+    padding:0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 870px) {
@@ -393,6 +456,11 @@ section.about .left h1,
     .works .right .item12{
         grid-column: 2/3;
     }
+
+    .services .right{
+        grid-template-columns: repeat(2, 1fr);
+        gap:20px;
+    }
 }
 
 @media screen and (max-width: 470px) {
@@ -433,7 +501,7 @@ section.about .left h1,
         width: 100%;
     }
 
-    section.about h1, .works .left h1 {
+    section.about h1, .works .left h1, .services .left {
         font-size: 30px;
         width: 100%;
     }
@@ -447,6 +515,14 @@ section.about .left h1,
         display: block;
     }
     .works .right .grid-item {
+        margin-bottom: 20px;
+    }
+
+    .services .right{
+        display: block;
+    }
+
+    .services .right div{
         margin-bottom: 20px;
     }
 }
