@@ -9,7 +9,7 @@
 body {
     font-family: 'Kumbh Sans', sans-serif;
     background-color: #000;
-    ;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -207,12 +207,12 @@ section.about .right div {
     cursor: pointer;
 }
 
-section.about .left h1{
+section.about .left h1 {
     margin-bottom: 10px;
 }
 
-section.about .right div h3{
-    padding:10px 0;
+section.about .right div h3 {
+    padding: 10px 0;
 }
 
 .about .left p {
@@ -220,126 +220,171 @@ section.about .right div h3{
 }
 
 .about p {
-    color: #c7c7c7;
+    color: #b8b8b8;
 }
 
 /* ***** WORKS ***** */
 
-.works{
-    width:100%;
-    height:auto;
+.works {
+    width: 100%;
+    height: auto;
     padding: 60px 0;
 }
-.works .left h1{
+
+.works .left h1 {
     margin-bottom: 60px;
     font-size: 40px;
     color: #fbca41;
 }
 
-.works .grid-container{
+.works .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows:repeat(4, 1fr) ;
-    gap:20px;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
 }
-.works .right .item1{
+
+.works .right .item1 {
     grid-column: 1/3;
 }
-.works .right .item6{
+
+.works .right .item6 {
     grid-column: 3/5;
 }
-.works .right .item7{
+
+.works .right .item7 {
     grid-column: 1/3;
 }
-.works .right .item12{
+
+.works .right .item12 {
     grid-column: 3/5;
 }
-.works .right .grid-item{
-    width:100%;
-    height:100%;
+
+.works .right .grid-item {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
-.works .right .galleryimage{
-    width:100%;
-    height:100%;
+
+.works .right .galleryimage {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transition: transform .5s;
 }
 
-.works .right .gallerylink{
-    position:relative;
+.works .right .gallerylink {
+    position: relative;
     display: block;
     width: 100%;
-    height:300px;
+    height: 300px;
     overflow: hidden;
 }
-.works .right .galleryoverlay{
+
+.works .right .galleryoverlay {
     position: absolute;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    background:rgba(0, 0, 0, 0.4);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
     opacity: 1;
     pointer-events: none;
     transition: opacity .2s;
 }
+
 .works .right .gallerylink:hover .galleryoverlay {
     opacity: 0;
 }
+
 .works .right .gallerylink:hover .galleryimage {
     transform: scale(1.2);
 }
 
 /* ***** SERVICES ***** */
-.services{
-    width:100%;
-    height:auto;
+.services {
+    width: 100%;
+    height: auto;
     padding: 60px 0;
-    color:#fff;
+    color: #fff;
 }
 
-.services p{
-    color:#c7c7c7;
+.services p {
+    color: #b8b8b8;
 }
 
-.services .left h1{
+.services .left h1 {
     font-size: 40px;
     color: #fbca41;
     margin-bottom: 60px;
 }
-.services .right{
+
+.services .right {
     display: grid;
-    width:100%;
+    width: 100%;
     align-items: center;
     justify-content: space-around;
     grid-template-columns: repeat(4, 1fr);
-    gap:20px;
+    gap: 20px;
 }
-.services .right div{
+
+.services .right div {
     cursor: pointer;
-    padding:20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    background:rgb(12, 12, 12);
+    background: #0f0f0f;
 }
-.services .right span{
+
+.services .right span {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 25px;
     margin-bottom: 100px;
     /* padding-bottom: 10px; */
     border-right: 2px solid #fbca41;
 }
-.services .right h3{
-    margin:10px 0;
+
+.services .right h3 {
+    margin: 10px 0;
 }
 
-.services .left h1 span{
+.services .left h1 span {
+    color: #000;
+    background: #fbca41;
+    padding: 0 10px;
+}
+
+.jumbotron {
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
     color:#000;
-    background:#fbca41;
-    padding:0 10px;
 }
 
+.jumbotron div{
+    height:auto;
+    width:100%;
+    background: -webkit-linear-gradient(to right, #fbca41, #f8ad0a);
+    background: linear-gradient(to bottom, #fbca41, #f8ad0a);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.jumbotron div h1{
+    font-size: 40px;
+    width: 30%;
+    margin-top: 50px;
+}
+.jumbotron div a svg{
+    stroke:#000;
+    margin-top: 50px;
+
+}
+.jumbotron div a svg path{
+    fill: #000;
+}
 
 
 
@@ -438,29 +483,34 @@ section.about .right div h3{
     section.about .right {
         padding: 20px 0;
     }
-    
-    .works .grid-container{
+
+    .works .grid-container {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows:repeat(6, 1fr) ;
-        gap:20px;
+        grid-template-rows: repeat(6, 1fr);
+        gap: 20px;
     }
-    .works .right .item1{
+
+    .works .right .item1 {
         grid-column: 1/2;
     }
-    .works .right .item6{
-        grid-column: 2/3;
-    }
-    .works .right .item7{
-        grid-column: 1/2;
-    }
-    .works .right .item12{
+
+    .works .right .item6 {
         grid-column: 2/3;
     }
 
-    .services .right{
-        grid-template-columns: repeat(2, 1fr);
-        gap:20px;
+    .works .right .item7 {
+        grid-column: 1/2;
     }
+
+    .works .right .item12 {
+        grid-column: 2/3;
+    }
+
+    .services .right {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
 }
 
 @media screen and (max-width: 470px) {
@@ -501,7 +551,9 @@ section.about .right div h3{
         width: 100%;
     }
 
-    section.about h1, .works .left h1, .services .left {
+    section.about h1,
+    .works .left h1,
+    .services .left h1{
         font-size: 30px;
         width: 100%;
     }
@@ -511,19 +563,32 @@ section.about .right div h3{
         flex-direction: column;
         padding: 20px 0;
     }
-    .works .grid-container{
+
+    .works .grid-container {
         display: block;
     }
+
     .works .right .grid-item {
         margin-bottom: 20px;
     }
 
-    .services .right{
+    .services .right {
         display: block;
     }
 
-    .services .right div{
+    .services .right div {
         margin-bottom: 20px;
+    }
+    .jumbotron div {
+        padding:20px;
+    }
+    .jumbotron div h1{
+        font-size: 25px;
+    }
+    .jumbotron div svg{
+        position: relative;
+        top:60px;
+        margin: 0;
     }
 }
 
