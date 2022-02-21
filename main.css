@@ -69,10 +69,11 @@ header .links ul {
 
 header .links a {
     color: #fff;
-    margin-left: 3.5rem;
+    margin-left: 3rem;
     display: inline-block;
     font-weight: bold;
     transition: all 0.3s ease;
+    font-size: 14px;
 }
 
 header .links a:hover {
@@ -236,15 +237,123 @@ section.about .right div h3 {
     font-size: 40px;
     color: #fbca41;
 }
+.works .left h1 span {
+    color: #000;
+    background: #fbca41;
+    padding: 0 10px;
+}
 
 .works .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 20px;
 }
 
-.works .right .item1 {
+.works .right .grid-item{
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.works .right .grid-item{
+    height:300px;
+}
+
+.works .right .item1{
+    background:url(./images/1.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/3;
+    animation: change 20s ease-in-out infinite;
+}
+
+.works .right .item2{
+    background: url(./images/2.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.works .right .item3{
+    background: url(./images/11.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.works .right .item4{
+    background: url(./images/15.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.works .right .item5{
+    background: url(./images/3.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.works .right .item6{
+    background: url(./images/4.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    grid-column: 3/5;
+    animation: change2 20s ease-in-out infinite;
+    animation-delay: 5s;
+}
+
+.works .right .item7{
+    background: url(./images/3.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/3;
+    animation: change 20s ease-in-out infinite;
+    animation-delay: 7s;
+}
+
+.works .right .item8{
+    background: url(./images/9.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+.works .right .item9{
+    background: url(./images/1.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+/* .works .right .item10{
+    background: url(./images/4.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+.works .right .item11{
+    background: url(./images/4.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+.works .right .item12{
+    background: url(./images/4.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    grid-column: 3/5;
+    animation: change 20s ease-in-out infinite;
+
+} */
+
+
+
+/* .works .right .item1 {
     grid-column: 1/3;
 }
 
@@ -299,7 +408,7 @@ section.about .right div h3 {
 
 .works .right .gallerylink:hover .galleryimage {
     transform: scale(1.2);
-}
+} */
 
 /* ***** SERVICES ***** */
 .services {
@@ -385,6 +494,70 @@ section.about .right div h3 {
 .jumbotron div a svg path{
     fill: #000;
 }
+
+/* ***** CONTACT ***** */
+
+.contact {
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
+}
+.contact .footer{
+    color:#fff;
+}
+.contact .footer .top{
+    width:100%;
+    height:400px;
+}
+.contact .footer .top iframe{
+    width:100%;
+    height:100%;
+}
+.contact .footer .bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+}
+.footer .bottom .sec1{
+    width:20%;
+    margin-bottom: 20px;
+}
+.footer .bottom .sec1 i{
+    font-size: 30px;
+}
+.footer .bottom .sec1 a img{
+    width:90px;
+}
+.footer .bottom .sec1 p{
+    color: #b8b8b8;
+}
+.footer .bottom .sec2 p{
+    color:#b8b8b8;
+    margin-bottom: 5px;
+}
+.footer .bottom .sec2 h4,
+.footer .bottom .sec3 h4{
+     margin-bottom: 10px;
+}
+.footer .bottom .sec3{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.footer .bottom .sec3 i{
+    font-size: 15px;
+    color:#b8b8b8;
+}
+.footer .bottom .sec3 a{
+    color:#b8b8b8;
+    margin-bottom: 5px;
+}
+.footer .bottom .sec3 a:hover{
+    color:#fff;
+    
+}
+ 
 
 
 
@@ -486,7 +659,7 @@ section.about .right div h3 {
 
     .works .grid-container {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(6, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
         gap: 20px;
     }
 
@@ -562,14 +735,21 @@ section.about .right div h3 {
         display: flex;
         flex-direction: column;
         padding: 20px 0;
+        
     }
 
-    .works .grid-container {
-        display: block;
+    .works .right .grid-container {
+        display: flex;
+        flex-direction: column;
+        
     }
 
-    .works .right .grid-item {
-        margin-bottom: 20px;
+    
+    .works .right .grid-item{
+        height:300px;
+        width:100%;
+        background-position: center;
+        background-size: cover;
     }
 
     .services .right {
@@ -589,6 +769,18 @@ section.about .right div h3 {
         position: relative;
         top:60px;
         margin: 0;
+    }
+    .contact .footer .bottom{
+        flex-direction: column;
+        justify-content: space-between;
+    
+    }
+    .footer .bottom .sec1{
+        width:100%;
+    }
+    .footer .bottom .sec2,
+    .footer .bottom .sec3{
+        margin-bottom: 20px;
     }
 }
 
@@ -611,4 +803,49 @@ section.about .right div h3 {
     to {
         transform: translateY(0);
     }
+}
+
+
+@keyframes change {
+    0%{
+        background-image: url('./images/12.jpg');
+    }
+    20%{
+        background-image: url('./images/6.jpg');
+    }
+    40%{
+        background-image: url('./images/7.jpg');
+    }
+    60%{
+        background-image: url('./images/8.jpg');
+    }
+    80%{
+        background-image: url('./images/4.jpg');
+    }
+    100%{
+        background-image: url('./images/5.jpg');
+    }
+
+}
+
+@keyframes change2 {
+    0%{
+        background-image: url('./images/13.jpg');
+    }
+    20%{
+        background-image: url('./images/16.jpg');
+    }
+    40%{
+        background-image: url('./images/17.jpg');
+    }
+    60%{
+        background-image: url('./images/8.jpg');
+    }
+    80%{
+        background-image: url('./images/4.jpg');
+    }
+    100%{
+        background-image: url('./images/5.jpg');
+    }
+
 }
