@@ -274,6 +274,8 @@ section.about .right div h3 {
     object-fit: cover;
     background-size: cover;
     background-position: center;
+    animation: change2 20s ease-in-out infinite;
+    animation-delay: 1s;
 }
 
 .works .right .item3{
@@ -281,6 +283,9 @@ section.about .right div h3 {
     object-fit: cover;
     background-size: cover;
     background-position: center;
+    animation: change3 20s ease-in-out infinite;
+    animation-delay: 2s;
+
 }
 
 .works .right .item4{
@@ -288,6 +293,9 @@ section.about .right div h3 {
     object-fit: cover;
     background-size: cover;
     background-position: center;
+    animation: change4 20s ease-in-out infinite;
+    animation-delay: 3s;
+
 }
 
 .works .right .item5{
@@ -295,6 +303,8 @@ section.about .right div h3 {
     object-fit: cover;
     background-size: cover;
     background-position: center;
+    animation: change5 20s ease-in-out infinite;
+    animation-delay: 4s;
 }
 
 .works .right .item6{
@@ -303,7 +313,7 @@ section.about .right div h3 {
     background-size: cover;
     background-position: center;
     grid-column: 3/5;
-    animation: change2 20s ease-in-out infinite;
+    animation: change6 20s ease-in-out infinite;
     animation-delay: 5s;
 }
 
@@ -313,8 +323,8 @@ section.about .right div h3 {
     background-size: cover;
     background-position: center;
     grid-column: 1/3;
-    animation: change 20s ease-in-out infinite;
-    animation-delay: 7s;
+    animation: change7 20s ease-in-out infinite;
+    animation-delay: 6s;
 }
 
 .works .right .item8{
@@ -322,12 +332,17 @@ section.about .right div h3 {
     object-fit: cover;
     background-size: cover;
     background-position: center;
+    animation: change8 20s ease-in-out infinite;
+    animation-delay: 7s;
+
 }
 .works .right .item9{
     background: url(./images/1.jpg);
     object-fit: cover;
     background-size: cover;
     background-position: center;
+    animation: change9 20s ease-in-out infinite;
+    animation-delay: 8s;
 }
 /* .works .right .item10{
     background: url(./images/4.jpg);
@@ -808,18 +823,15 @@ section.about .right div h3 {
 
 @keyframes change {
     0%{
-        background-image: url('./images/12.jpg');
+        background-image: url('./images/1.jpg');
     }
-    20%{
-        background-image: url('./images/6.jpg');
+    25%{
+        background-image: url('./images/2.jpg');
     }
-    40%{
-        background-image: url('./images/7.jpg');
+    50%{
+        background-image: url('./images/3.jpg');
     }
-    60%{
-        background-image: url('./images/8.jpg');
-    }
-    80%{
+    75%{
         background-image: url('./images/4.jpg');
     }
     100%{
@@ -830,22 +842,152 @@ section.about .right div h3 {
 
 @keyframes change2 {
     0%{
-        background-image: url('./images/13.jpg');
+        background-image: url('./images/6.jpg');
     }
-    20%{
-        background-image: url('./images/16.jpg');
+    25%{
+        background-image: url('./images/7.jpg');
     }
-    40%{
-        background-image: url('./images/17.jpg');
-    }
-    60%{
+    50%{
         background-image: url('./images/8.jpg');
     }
-    80%{
+    75%{
+        background-image: url('./images/9.jpg');
+    }
+    100%{
+        background-image: url('./images/10.jpg');
+    }
+
+}
+
+@keyframes change3 {
+    0%{
+        background-image: url('./images/11.jpg');
+    }
+    25%{
+        background-image: url('./images/12.jpg');
+    }
+    50%{
+        background-image: url('./images/13.jpg');
+    }
+    75%{
+        background-image: url('./images/14.jpg');
+    }
+    100%{
+        background-image: url('./images/15.jpg');
+    }
+
+}
+
+@keyframes change4 {
+    0%{
+        background-image: url('./images/16.jpg');
+    }
+    25%{
+        background-image: url('./images/17.jpg');
+    }
+    50%{
+        background-image: url('./images/1.jpg');
+    }
+    75%{
+        background-image: url('./images/2.jpg');
+    }
+    100%{
+        background-image: url('./images/3.jpg');
+    }
+
+}
+
+@keyframes change5 {
+    0%{
         background-image: url('./images/4.jpg');
+    }
+    25%{
+        background-image: url('./images/5.jpg');
+    }
+    50%{
+        background-image: url('./images/6.jpg');
+    }
+    75%{
+        background-image: url('./images/7.jpg');
+    }
+    100%{
+        background-image: url('./images/8.jpg');
+    }
+
+}
+
+@keyframes change6 {
+    0%{
+        background-image: url('./images/9.jpg');
+    }
+    25%{
+        background-image: url('./images/10.jpg');
+    }
+    50%{
+        background-image: url('./images/11.jpg');
+    }
+    75%{
+        background-image: url('./images/12.jpg');
     }
     100%{
         background-image: url('./images/5.jpg');
+    }
+
+}
+
+@keyframes change7 {
+    0%{
+        background-image: url('./images/6.jpg');
+    }
+    25%{
+        background-image: url('./images/7.jpg');
+    }
+    50%{
+        background-image: url('./images/8.jpg');
+    }
+    75%{
+        background-image: url('./images/9.jpg');
+    }
+    100%{
+        background-image: url('./images/10.jpg');
+    }
+
+}
+
+@keyframes change8 {
+    0%{
+        background-image: url('./images/11.jpg');
+    }
+    25%{
+        background-image: url('./images/12.jpg');
+    }
+    50%{
+        background-image: url('./images/13.jpg');
+    }
+    75%{
+        background-image: url('./images/14.jpg');
+    }
+    100%{
+        background-image: url('./images/15.jpg');
+    }
+
+}
+
+@keyframes change9 {
+    0%{
+        background-image: url('./images/16.jpg');
+    }
+    25%{
+        background-image: url('./images/17.jpg');
+    }
+    50%{
+        background-image: url('./images/1.jpg');
+    }
+    75%{
+        background-image: url('./images/2.jpg');
+    }
+    100%{
+        background-image: url('./images/3.jpg');
     }
 
 }
